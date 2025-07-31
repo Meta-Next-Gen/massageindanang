@@ -1,5 +1,5 @@
 <template>
-  <header class="absolute w-full z-50 bg-transparent py-4">
+  <header class="py-4">
     <nav class="container mx-auto px-4 flex justify-between items-center">
       <!-- Logo -->
       <a href="#" class="block">
@@ -7,16 +7,18 @@
       </a>
       <!-- Nút thay đổi ngôn ngữ với biểu tượng lá cờ -->
       <div class="relative">
-        <button @click="state.show = !state.show">
+        <button @click="state.showLanguage = !state.showLanguage">
           <img :src="flag?.icon" :alt="flag?.code" class="inline">
         </button>
-        <div class="absolute right-0 bg-white rounded-lg shadow-lg flex space-x-2 px-2" :class="{ 'hidden': !state.show }">
-          <template v-for="flag in flags">
-            <NuxtLink :to="flag.code" class=" w-8 h-8 ">
-              <img :src="flag.icon" :alt="flag.code" class="inline">
-            </NuxtLink>
-          </template>
-        </div>
+        <Transition enter-active-class="animate-fade-left" leave-active-class="animate-fade-left animate-reverse">
+          <div v-if="state.showLanguage" class="absolute right-0 bg-white rounded-lg shadow-lg flex space-x-2 px-2">
+            <template v-for="flag in flags">
+              <NuxtLink :to="flag.code" class=" w-8 h-8 ">
+                <img :src="flag.icon" :alt="flag.code" class="inline">
+              </NuxtLink>
+            </template>
+          </div>
+        </Transition>
       </div>
     </nav>
   </header>
@@ -24,15 +26,15 @@
   <main>
     <!-- Hero Section -->
     <!-- Phần Hero đã được cập nhật thành bố cục 2 cột -->
-    <section id="hero" class="relative h-screen flex items-center justify-center bg-white overflow-hidden">
+    <section id="hero" class="md:h-screen flex items-center justify-center ">
       <!-- Đã loại bỏ lớp phủ gradient nền, nền giờ là màu trắng -->
-      <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
         <!-- Cột trái: Tiêu đề, giới thiệu và nút đặt lịch -->
         <div class="md:w-1/2 text-center md:text-left animate-fade-in-up">
           <h1 class="text-4xl md:text-9xl font-extrabold leading-tight mb-6 text-primary">
-            Massage<br /> Tại Nhà
+            Massage <span class="inline md:block">Tại Nhà</span>
           </h1>
-          <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto md:mx-0 text-gray-700">
+          <p class="text-lg md:text-xl mb-16 max-w-2xl mx-auto md:mx-0 text-gray-700">
             Trải nghiệm sự thư giãn tuyệt đối với dịch vụ massage chuyên nghiệp ngay tại ngôi nhà của bạn.
           </p>
           <a href="#footer"
@@ -41,7 +43,7 @@
           </a>
         </div>
         <!-- Cột phải: Hình ảnh -->
-        <div class="md:w-1/2 flex justify-center md:justify-end animate-fade-in-up delay-200">
+        <div class="md:w-1/2 order-first md:order-last flex justify-center md:justify-end animate-fade-in-up delay-200">
           <img src="/images/banner.png" alt="Hình ảnh Massage"
             class="rounded-3xl shadow-2xl max-w-full h-auto object-cover">
         </div>
@@ -215,7 +217,7 @@
   </main>
 
   <!-- Footer -->
-  <footer id="footer" class="bg-gray-800 text-white py-10">
+  <footer id="footer" class="bg-gray-800 text-white py-12">
     <div class="container mx-auto px-4">
       <!-- Footer content wrapper for two columns -->
       <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
@@ -231,80 +233,73 @@
         </div>
 
         <!-- Right Column: Social Media -->
-        <div class="text-center md:text-right md:w-1/2">
+        <div class="text-center md:text-right md:w-1/2 order-first md:order-last mb-10">
           <p class="text-lg font-semibold mb-4">Kết nối với chúng tôi</p>
           <div class="flex justify-center md:justify-end space-x-6">
-            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-              <svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z"
-                  clip-rule="evenodd" />
-              </svg>
+            <a href="tel:0789489459" class="text-gray-400 hover:text-white transition duration-300">
+              <img src="/logos/phone.svg" alt="Phone" class="h-6 w-6">
             </a>
-            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-              <svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true">
-                <path
-                  d="M12.315 2.417a.75.75 0 00-1.03 0L1.716 11.47a.75.75 0 00.515 1.283h1.967A6.75 6.75 0 0012 18.75a6.75 6.75 0 007.792-7.057h1.967a.75.75 0 00.515-1.283L12.315 2.417zM12 21.75a9.75 9.75 0 110-19.5 9.75 9.75 0 010 19.5z" />
-              </svg>
+            <a href="https://www.facebook.com/lien.phan.413325#"
+              class="text-gray-400 hover:text-white transition duration-300">
+              <img src="/logos/facebook.svg" alt="Facebook" class="h-6 w-6">
             </a>
-            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-              <svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true">
-                <path
-                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.75 6.75a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.75 0a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.75 0a.75.75 0 100-1.5.75.75 0 000 1.5zm7.5 3.75a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.75 0a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.75 0a.75.75 0 100-1.5.75.75 0 000 1.5zm7.5 3.75a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.75 0a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.75 0a.75.75 0 100-1.5.75.75 0 000 1.5z" />
-              </svg>
+            <a href="http://qr.kakao.com/talk/RKGLmzR6kDq4.b17wlsO.ClBFiw-"
+              class="text-gray-400 hover:text-white transition duration-300">
+              <img src="/logos/kakaotalk.svg" alt="KakaoTalk" class="h-6 w-6">
+            </a>
+            <a href="https://zaloapp.com/qr/p/140qbin8a5e2d?src=qr"
+              class="text-gray-400 hover:text-white transition duration-300">
+              <img src="/logos/zalo.svg" alt="Zalo" class="h-6 w-6">
+            </a>
+            <a href="https://wa.me/qr/WJTF2BIQME3EB1" class="text-gray-400 hover:text-white transition duration-300">
+              <img src="/logos/whatsapp.svg" alt="WhatsApp" class="h-6 w-6">
+            </a>
+            <a href="https://u.wechat.com/kKScc93Ie77PvEZe-8hpzYI?s=2"
+              class="text-gray-400 hover:text-white transition duration-300">
+              <img src="/logos/wechat.svg" alt="WeChat" class="h-6 w-6">
+            </a>
+            <a href="https://vt.tiktok.com/ZSS8nQFrv/" class="text-gray-400 hover:text-white transition duration-300">
+              <img src="/logos/tiktok.svg" alt="TikTok" class="h-6 w-6">
             </a>
           </div>
         </div>
       </div>
-      <!-- Copyright text (original position, now removed or hidden by the above change) -->
-      <!-- <p class="text-center mt-4 pt-4 border-t border-gray-700">&copy; 2024 Massage Tại Nhà Đà Nẵng. Mọi quyền được bảo lưu.</p> -->
     </div>
   </footer>
 
-  <!-- Floating Action Button (FAB) -->
   <div class="fixed bottom-8 right-8 z-50">
-    <!-- Main FAB -->
-    <button id="main-fab"
-      class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110">
-      <!-- Icon for main FAB, e.g., a plus sign or a chat icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.455 3.62 2.895 7.5 2.895s7.5-1.44 7.5-2.895m-9.75-3h9m-9 3H12m-9.75-1.51c0 1.455 3.62 2.895 7.5 2.895s7.5-1.44 7.5-2.895" />
-      </svg>
+    <button
+      class="bg-primary text-white p-1 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110"
+      @click="state.showHelp = !state.showHelp">
+      <img src="/logos/help.svg" alt="Help" class="h-12 w-12">
     </button>
 
-    <!-- Child buttons container with transition effects -->
-    <div id="fab-child-buttons" class="absolute bottom-full right-0 mb-4 space-y-3 
-                    hidden transform scale-0 opacity-0 transition-all duration-300 ease-in-out origin-bottom-right">
-      <!-- Social Media Button 1 (e.g., Facebook) -->
-      <a href="https://facebook.com/yourpage" target="_blank"
-        class="block bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-110">
-        <svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true">
-          <path fill-rule="evenodd"
-            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z"
-            clip-rule="evenodd" />
-        </svg>
-      </a>
-      <!-- Social Media Button 2 (e.g., Zalo - using a generic chat icon as Zalo doesn't have a standard SVG in common libraries) -->
-      <a href="https://zalo.me/yourid" target="_blank"
-        class="block bg-blue-400 text-white p-3 rounded-full shadow-lg hover:bg-blue-500 transition duration-300 transform hover:scale-110">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H16.5m3.75 7.375V9.375c0-.621-.504-1.125-1.125-1.125h-4.125V6.75a9.75 9.75 0 0 0-9.75 9.75v1.562c0 .288.234.522.522.522H6.75a.75.75 0 0 0 .75-.75V18a6 6 0 0 1 6-6h.375A1.125 1.125 0 0 1 19.5 13.125v4.125c0 .621.504 1.125 1.125 1.125h1.372c.516 0 .966-.351 1.091-.852l1.106-4.423a2.25 2.25 0 0 0-.828-1.92L19.5 8.25Z" />
-        </svg>
-      </a>
-      <!-- Social Media Button 3 (e.g., Phone Call) -->
-      <a href="tel:+84905xxxxxx"
-        class="block bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-110">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106a2.25 2.25 0 0 1-1.92-.828l-1.747-1.747a1.5 1.5 0 0 0-1.06-.44H9.75a1.5 1.5 0 0 1-1.06-.44L6.92 10.74A2.25 2.25 0 0 1 6.09 8.817L5 4.5a2.25 2.25 0 0 0-2.25-2.25Z" />
-        </svg>
-      </a>
-    </div>
+    <Transition enter-active-class="animate-fade-up" leave-active-class="animate-fade-up animate-reverse">
+      <div v-if="state.showHelp"
+        class="absolute bottom-full right-1/2 translate-x-1/2 rounded-xl grid gap-3 mb-4 bg-white shadow-lg">
+        <a href="tel:0789489459" target="_blank">
+          <img src="/logos/phone.svg" alt="Phone" class="h-10 w-10 hover:scale-110 transition duration-300">
+        </a>
+        <a href="https://www.facebook.com/lien.phan.413325#" target="_blank">
+          <img src="/logos/facebook.svg" alt="Facebook" class="h-10 w-10 hover:scale-110 transition duration-300">
+        </a>
+        <a href="http://qr.kakao.com/talk/RKGLmzR6kDq4.b17wlsO.ClBFiw-" target="_blank">
+          <img src="/logos/kakaotalk.svg" alt="KakaoTalk" class="h-10 w-10 hover:scale-110 transition duration-300">
+        </a>
+        <a href="https://zaloapp.com/qr/p/140qbin8a5e2d?src=qr" target="_blank">
+          <img src="/logos/zalo.svg" alt="Zalo" class="h-10 w-10 hover:scale-110 transition duration-300">
+        </a>
+        <a href="https://wa.me/qr/WJTF2BIQME3EB1" target="_blank">
+          <img src="/logos/whatsapp.svg" alt="WhatsApp" class="h-10 w-10 hover:scale-110 transition duration-300">
+        </a>
+        <a href="https://u.wechat.com/kKScc93Ie77PvEZe-8hpzYI?s=2" target="_blank">
+          <img src="/logos/wechat.svg" alt="WeChat" class="h-10 w-10 hover:scale-110 transition duration-300">
+        </a>
+        <a href="https://vt.tiktok.com/ZSS8nQFrv/" target="_blank">
+          <img src="/logos/tiktok.svg" alt="TikTok" class="h-10 w-10 hover:scale-110 transition duration-300">
+        </a>
+      </div>
+    </Transition>
   </div>
 
 </template>
@@ -312,11 +307,11 @@
 <script lang="ts" setup>
 
 const state = reactive({
-  show: false
+  showLanguage: false,
+  showHelp: false
 })
 
 const { path } = useRoute()
-const router = useRouter()
 
 const flags = [
   { code: '', icon: '/flags/vi.svg' },

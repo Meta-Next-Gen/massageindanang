@@ -1,35 +1,10 @@
 @import 'tailwindcss';
+@import "tailwindcss-animated";
 
-:root {
-  --color-primary: #986944; /* Màu chính */
-  --color-primary-dark: #7a5436; /* Màu tối hơn cho hover/tiêu đề */
-  --color-primary-light: #b68462; /* Màu sáng hơn cho văn bản/biểu tượng */
-}
-
-/* Các lớp tiện ích tùy chỉnh sử dụng biến CSS */
-.bg-primary {
-  background-color: var(--color-primary);
-}
-.text-primary {
-  color: var(--color-primary);
-}
-.border-primary {
-  border-color: var(--color-primary);
+@theme{
+  --color-primary: #986944;  
 }
 
-.hover\:bg-primary-dark:hover {
-  background-color: var(--color-primary-dark);
-}
-.hover\:text-primary-dark:hover {
-  color: var(--color-primary-dark);
-}
-
-.text-primary-dark {
-  color: var(--color-primary-dark);
-}
-.text-primary-light {
-  color: var(--color-primary-light);
-}
 
 body {
   font-family: 'Lora', serif;
@@ -43,8 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Playfair Display', serif;
-  /* Font chữ cho các tiêu đề */
+  font-family: 'Playfair Display', serif;  
 }
 
 /* Custom scrollbar for better aesthetics */
@@ -64,43 +38,4 @@ h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* Style for language dropdown */
-.language-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.language-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  right: 0;
-  /* Align dropdown to the right */
-  border-radius: 0.5rem;
-  /* Rounded corners */
-  overflow: hidden;
-  /* Ensure rounded corners apply to content */
-}
-
-.language-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.language-dropdown-content a:hover {
-  background-color: #f1f1f1;
-  color: var(--color-primary); /* Sử dụng màu chính cho hover */
-  /* primary */
-}
-
-.language-dropdown-content.show {
-  display: block;
 }
