@@ -115,31 +115,40 @@
             <ul class="space-y-4 text-lg text-gray-700">
               <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
                 <span>60 phút</span>
-                <span class="font-semibold text-primary">370K</span>
+                <span class="font-semibold text-primary">350K</span>
               </li>
               <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
                 <span>90 phút</span>
-                <span class="font-semibold text-primary">500K</span>
+                <span class="font-semibold text-primary">450K</span>
               </li>
               <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
                 <span>120 phút</span>
-                <span class="font-semibold text-primary">650K</span>
+                <span class="font-semibold text-primary">550K</span>
+              </li>
+              <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
+                <span>Đá nóng</span>
+                <span class="font-semibold text-primary">+50K</span>
+              </li>
+              <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
+                <span>Giác hơi</span>
+                <span class="font-semibold text-primary">+50K</span>
               </li>
             </ul>
           </div>
           <!-- Cạo gió/Giác hơi Pricing -->
           <div class="bg-gray-50 p-8 rounded-xl shadow-lg border-t-4 border-primary">
-            <h3 class="text-3xl font-bold text-primary mb-6 text-center">Cạo gió/Giác hơi</h3>
+            <h3 class="text-3xl font-bold text-primary mb-6 text-center">VIP Massage</h3>            
             <ul class="space-y-4 text-lg text-gray-700">
               <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
-                <span>60 phút</span>
-                <span class="font-semibold text-primary">450K</span>
+                <span>90 phút</span>
+                <span class="font-semibold text-primary">600K</span>
               </li>
               <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
-                <span>90 phút</span>
-                <span class="font-semibold text-primary">550K</span>
+                <span>120 phút</span>
+                <span class="font-semibold text-primary">700K</span>
               </li>
             </ul>
+            <p class="text-gray-500 italic">* Trị liệu, thư giãn sâu kết hợp với đá nóng và giác hơi</p>
           </div>
         </div>
       </div>
