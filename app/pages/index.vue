@@ -53,20 +53,15 @@
     <!-- Services Section -->
     <section id="services" class="py-16 bg-gray-100">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center text-primary mb-12">Dịch Vụ Của Chúng Tôi</h2>
+        <h2 class="text-4xl font-bold text-center text-primary mb-12">Dịch Vụ</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Service Card 1 -->
           <div
             class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
             <div class="text-primary mb-4 text-5xl text-center">
-              <!-- Placeholder SVG Icon for Massage -->
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-16 h-16 mx-auto">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-              </svg>
+              <img src="/images/massage-body.svg" alt="Massage Body" class="w-16 h-16 mx-auto">
             </div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Massage Thư Giãn Toàn Thân
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Massage Toàn Thân
             </h3>
             <p class="text-gray-700 text-center">Giúp giảm căng thẳng, cải thiện tuần hoàn máu và mang lại
               cảm giác thư thái sâu sắc.</p>
@@ -75,11 +70,7 @@
           <div
             class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
             <div class="text-primary mb-4 text-5xl text-center">
-              <!-- Placeholder SVG Icon for Hot Stone -->
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-16 h-16 mx-auto">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M15 6l-3-3-3 3M15 18l-3 3-3-3" />
-              </svg>
+              <img src="/images/massage-hot-stones.svg" alt="Massage Hot Stones" class="w-16 h-16 mx-auto">
             </div>
             <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Massage Đá Nóng</h3>
             <p class="text-gray-700 text-center">Sử dụng đá nóng giúp làm dịu cơ bắp, giảm đau nhức và tăng
@@ -89,16 +80,10 @@
           <div
             class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
             <div class="text-primary mb-4 text-5xl text-center">
-              <!-- Placeholder SVG Icon for Foot Massage -->
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-16 h-16 mx-auto">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
-              </svg>
+              <img src="/images/massage-herbal.svg" alt="Massage herbals" class="w-16 h-16 mx-auto">
             </div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Massage Chân & Cổ Vai Gáy</h3>
-            <p class="text-gray-700 text-center">Tập trung vào các huyệt đạo giúp giảm mệt mỏi, cải thiện
-              giấc ngủ.</p>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Giác hơi & Cạo gió</h3>
+            <p class="text-gray-700 text-center">Phương pháp đơn giản nhất để thanh nhiệt giải hàn, xóa bỏ các điểm tắc nghẽn trong kinh mạch.</p>
           </div>
         </div>
       </div>
@@ -137,7 +122,7 @@
           </div>
           <!-- Cạo gió/Giác hơi Pricing -->
           <div class="bg-gray-50 p-8 rounded-xl shadow-lg border-t-4 border-primary">
-            <h3 class="text-3xl font-bold text-primary mb-6 text-center">VIP Massage</h3>            
+            <h3 class="text-3xl font-bold text-primary mb-6 text-center">VIP Massage</h3>
             <ul class="space-y-4 text-lg text-gray-700">
               <li class="flex justify-between items-center pb-2 border-b border-gray-200 last:border-b-0">
                 <span>90 phút</span>
