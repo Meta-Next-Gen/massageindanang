@@ -9,7 +9,31 @@ export default defineNuxtConfig({
     '@/assets/css/tailwind.css',
   ],
   app: {
-    head: {              
+    head: {
+      title: 'Massage in Đà Nẵng - Thư Giãn Chuyên Nghiệp',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Khám phá dịch vụ massage thư giãn và trị liệu chuyên nghiệp tại Đà Nẵng. Đội ngũ kỹ thuật viên tay nghề cao, không gian yên tĩnh, giúp bạn phục hồi năng lượng.' },
+        // Open Graph Meta Tags
+        { property: 'og:title', content: 'Massage tại nhà - Đà Nẵng - Thư Giãn Chuyên Nghiệp' },
+        { property: 'og:description', content: 'Khám phá dịch vụ massage tại nhà thư giãn và trị liệu chuyên nghiệp ở Đà Nẵng. Đội ngũ kỹ thuật viên tay nghề cao, không gian yên tĩnh, giúp bạn phục hồi năng lượng.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://massageindanang.com/' },
+        { property: 'og:image', content: 'https://massageindanang.com/images/og-image.jpg' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:site_name', content: 'Massage In Da Nang' },
+        { property: 'og:locale', content: 'vi_VN' },
+
+        // Twitter Card Meta Tags
+        // { name: 'twitter:card', content: 'summary_large_image' },
+        // { name: 'twitter:site', content: '@massageindanang' }, // Thay @massageindanang bằng username Twitter của bạn
+        // { name: 'twitter:creator', content: '@massageindanang' }, // Thay @massageindanang bằng username Twitter của bạn
+        // { name: 'twitter:title', content: 'Massage Đà Nẵng - Thư Giãn Chuyên Nghiệp' },
+        // { name: 'twitter:description', content: 'Khám phá dịch vụ massage thư giãn và trị liệu chuyên nghiệp tại Đà Nẵng. Đội ngũ kỹ thuật viên tay nghề cao, không gian yên tĩnh, giúp bạn phục hồi năng lượng.' },
+        // { name: 'twitter:image', content: 'https://massageindanang.com/images/og-image.jpg' },
+      ],
       link: [
         {
           rel: 'preconnect',
