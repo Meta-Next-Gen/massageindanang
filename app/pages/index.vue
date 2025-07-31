@@ -3,18 +3,18 @@
     <nav class="container mx-auto px-4 flex justify-between items-center">
       <!-- Logo -->
       <a href="#" class="block">
-        <img src="/images/logo-black.png" alt="Massage Đà Nẵng Logo" class="h-12">
+        <img src="/images/logo-black.png" alt="Massage Đà Nẵng Logo" class="h-12" width="169" height="48">
       </a>
       <!-- Nút thay đổi ngôn ngữ với biểu tượng lá cờ -->
       <div class="relative">
         <button @click="state.showLanguage = !state.showLanguage" aria-label="Change Language">
-          <img :src="flag?.icon" :alt="flag?.code" class="inline">
+          <img :src="flag?.icon" :alt="flag?.code" width="32" height="32">
         </button>
         <Transition enter-active-class="animate-fade-left" leave-active-class="animate-fade-left animate-reverse">
           <div v-if="state.showLanguage" class="absolute right-0 bg-white rounded-lg shadow-lg flex space-x-2 px-2">
             <template v-for="flag in flags">
               <NuxtLink :to="flag.code" class=" w-8 h-8 ">
-                <img :src="flag.icon" :alt="flag.code" class="inline">
+                <img :src="flag.icon" :alt="flag.code" width="32" height="32" class="inline">
               </NuxtLink>
             </template>
           </div>
@@ -44,7 +44,7 @@
         </div>
         <!-- Cột phải: Hình ảnh -->
         <div class="md:w-1/2 order-first md:order-last flex justify-center md:justify-end animate-fade-in-up delay-200">
-          <img src="/images/banner.png" alt="Hình ảnh Massage"
+          <img src="/images/banner.png" alt="Hình ảnh Massage" width="736" height="736"
             class="rounded-3xl shadow-2xl max-w-full h-auto object-cover">
         </div>
       </div>
@@ -143,7 +143,7 @@
     <section id="about" class="py-16 bg-gray-100">
       <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
         <div class="md:w-1/2">
-          <img src="/images/about-us.jpg" alt="Về Chúng Tôi" class="rounded-xl shadow-lg w-full h-auto object-cover">
+          <img src="/images/about-us.jpg" alt="Về Chúng Tôi" width="736" height="617" class="rounded-xl shadow-lg w-full h-auto object-cover">
         </div>
         <div class="md:w-1/2">
           <h2 class="text-4xl font-bold text-primary mb-6">Về Chúng Tôi</h2>
@@ -219,7 +219,7 @@
         <div class="text-center md:text-left mb-6 md:mb-0 md:w-1/2">
           <!-- Logo added here -->
           <a href="#" class="block mb-4">
-            <img src="/images/logo-white.png" alt="Massage Đà Nẵng Logo" class="mx-auto md:mx-0 h-12">
+            <img src="/images/logo-white.png" alt="Massage Đà Nẵng Logo" class="mx-auto md:mx-0 h-12" width="169" height="48">
           </a>
           <!-- Copyright text moved here -->
           <p class="text-center md:text-left mt-4 pt-4 border-t border-gray-700 md:border-t-0 md:pt-0">&copy; 2024
@@ -231,29 +231,29 @@
           <p class="text-lg font-semibold mb-4">Kết nối với chúng tôi</p>
           <div class="flex justify-center md:justify-end space-x-6">
             <a href="tel:0789489459" class="text-gray-400 hover:text-white transition duration-300">
-              <img src="/logos/phone.svg" alt="Phone" class="h-6 w-6">
+              <img src="/logos/phone.svg" alt="Phone" class="h-6 w-6" width="24" height="24">
             </a>
             <a href="https://www.facebook.com/lien.phan.413325#"
               class="text-gray-400 hover:text-white transition duration-300">
-              <img src="/logos/facebook.svg" alt="Facebook" class="h-6 w-6">
+              <img src="/logos/facebook.svg" alt="Facebook" class="h-6 w-6" width="24" height="24">
             </a>
             <a href="http://qr.kakao.com/talk/RKGLmzR6kDq4.b17wlsO.ClBFiw-"
               class="text-gray-400 hover:text-white transition duration-300">
-              <img src="/logos/kakaotalk.svg" alt="KakaoTalk" class="h-6 w-6">
+              <img src="/logos/kakaotalk.svg" alt="KakaoTalk" class="h-6 w-6" width="24" height="24">
             </a>
             <a href="https://zaloapp.com/qr/p/140qbin8a5e2d?src=qr"
               class="text-gray-400 hover:text-white transition duration-300">
-              <img src="/logos/zalo.svg" alt="Zalo" class="h-6 w-6">
+              <img src="/logos/zalo.svg" alt="Zalo" class="h-6 w-6" width="24" height="24">
             </a>
             <a href="https://wa.me/qr/WJTF2BIQME3EB1" class="text-gray-400 hover:text-white transition duration-300">
-              <img src="/logos/whatsapp.svg" alt="WhatsApp" class="h-6 w-6">
+              <img src="/logos/whatsapp.svg" alt="WhatsApp" class="h-6 w-6" width="24" height="24">
             </a>
             <a href="https://u.wechat.com/kKScc93Ie77PvEZe-8hpzYI?s=2"
               class="text-gray-400 hover:text-white transition duration-300">
-              <img src="/logos/wechat.svg" alt="WeChat" class="h-6 w-6">
+              <img src="/logos/wechat.svg" alt="WeChat" class="h-6 w-6" width="24" height="24">
             </a>
             <a href="https://vt.tiktok.com/ZSS8nQFrv/" class="text-gray-400 hover:text-white transition duration-300">
-              <img src="/logos/tiktok.svg" alt="TikTok" class="h-6 w-6">
+              <img src="/logos/tiktok.svg" alt="TikTok" class="h-6 w-6" width="24" height="24">
             </a>
           </div>
         </div>
