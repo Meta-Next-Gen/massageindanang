@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
-    "flag-icons": "^7.5.0",
     "nuxt": "^4.0.1",
     "tailwindcss": "^4.1.11",
     "tailwindcss-animated": "^2.0.0",
