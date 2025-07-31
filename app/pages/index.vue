@@ -7,7 +7,7 @@
       </a>
       <!-- Nút thay đổi ngôn ngữ với biểu tượng lá cờ -->
       <div class="relative">
-        <button @click="state.showLanguage = !state.showLanguage">
+        <button @click="state.showLanguage = !state.showLanguage" aria-label="Change Language">
           <img :src="flag?.icon" :alt="flag?.code" class="inline">
         </button>
         <Transition enter-active-class="animate-fade-left" leave-active-class="animate-fade-left animate-reverse">
@@ -264,7 +264,7 @@
   <div class="fixed bottom-8 right-8 z-50">
     <button
       class="bg-primary text-white p-1 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110"
-      @click="state.showHelp = !state.showHelp">
+      @click="state.showHelp = !state.showHelp" aria-label="Contact Us">
       <img src="/logos/help.svg" alt="Help" class="h-12 w-12">
     </button>
 
@@ -299,6 +299,8 @@
 </template>
 
 <script lang="ts" setup>
+
+
 
 const state = reactive({
   showLanguage: false,
