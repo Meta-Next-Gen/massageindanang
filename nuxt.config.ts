@@ -5,9 +5,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   ssr: false,
+
   css: [
     '@/assets/css/tailwind.css',
   ],
+
   app: {
     head: {
       title: 'Massage in Đà Nẵng - Thư Giãn Chuyên Nghiệp',
@@ -49,11 +51,22 @@ export default defineNuxtConfig({
         }
       ]
     }
-  }
-  ,
+  },
+  i18n: {
+    defaultLocale: 'vi',        
+    locales: [
+      {code: 'en',iso: 'en-US',name: 'English',file: 'en.json'},
+      {code: 'vi',iso: 'vi-VN',name: 'Tiếng Việt',file: 'vi.json'},
+      {code: 'ja',iso: 'ja-JP',name: '日本語',file: 'ja.json'},
+      {code: 'cn',iso: 'zh-CN',name: '中文',file: 'cn.json'},
+      {code: 'kr',iso: 'ko-KR',name: '한국어',file: 'kr.json'}      
+    ],
+  },
   vite: {
     plugins: [
       tailwindcss(),
     ],
-  }
+  },
+
+  modules: ['@nuxtjs/i18n']
 })
