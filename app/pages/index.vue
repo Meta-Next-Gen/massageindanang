@@ -192,7 +192,7 @@
 
   <div class="fixed bottom-8 right-8 z-50">
     <button
-      class="bg-primary text-white p-1 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110"
+      class="bg-primary text-white p-1 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110 cursor-pointer"
       @click="state.showHelp = !state.showHelp" aria-label="Contact Us">
       <img src="/logos/help.svg" alt="Help" class="h-12 w-12">
     </button>
