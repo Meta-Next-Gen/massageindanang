@@ -40,6 +40,7 @@ export default defineNuxtConfig({
         // { name: 'twitter:image', content: 'https://massageindanang.com/images/og-image.jpg' },
       ],
       link: [
+        { rel: 'icon', type: 'image/png', href: '/logos/fav.png' },
         {
           rel: 'preconnect',
           href: 'https://fonts.googleapis.com'
