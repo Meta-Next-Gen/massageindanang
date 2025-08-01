@@ -228,12 +228,19 @@
 </template>
 
 <script lang="ts" setup>
-const { locale, locales, setLocale, tm } = useI18n()
-
-
+const { locale, locales, setLocale, t } = useI18n()
 
 const state = reactive({
   showLanguage: false,
   showHelp: false
 })
+
+useSeoMeta({
+  title: t('seo.title'),
+  ogTitle: t('seo.title'),
+  description: t('seo.description'),
+  ogDescription: t('seo.description'),
+  ogImage: 'https://massageindanang.com/images/og-image.jpg'
+});
+
 </script>

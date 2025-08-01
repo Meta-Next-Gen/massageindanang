@@ -53,13 +53,14 @@ export default defineNuxtConfig({
     }
   },
   i18n: {
-    defaultLocale: 'vi',        
+    defaultLocale: 'vi',
+    baseUrl: 'https://massageindanang.com',
     locales: [
-      {code: 'en',iso: 'en-US',name: 'English',file: 'en.json'},
-      {code: 'vi',iso: 'vi-VN',name: 'Tiếng Việt',file: 'vi.json'},
-      {code: 'ja',iso: 'ja-JP',name: '日本語',file: 'ja.json'},
-      {code: 'cn',iso: 'zh-CN',name: '中文',file: 'cn.json'},
-      {code: 'kr',iso: 'ko-KR',name: '한국어',file: 'kr.json'}      
+      { code: 'en', iso: 'en-US', language: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'vi', iso: 'vi-VN', language: 'vi-VN', name: 'Tiếng Việt', file: 'vi.json' },
+      { code: 'ja', iso: 'ja-JP', language: 'ja-JP', name: '日本語', file: 'ja.json' },
+      { code: 'cn', iso: 'zh-CN', language: 'zh-CN', name: '中文', file: 'cn.json' },
+      { code: 'kr', iso: 'ko-KR', language: 'ko-KR', name: '한국어', file: 'kr.json' }
     ],
   },
   vite: {
