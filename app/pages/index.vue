@@ -122,7 +122,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <template v-for="testimonial in $tm('testimonials.items')">
             <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-              <p class="text-gray-700 italic mb-6">"{{ testimonial.content }}"</p>
+              <p class="text-gray-700 italic mb-6">"{{ $rt(testimonial.content) }}"</p>
               <div class="flex items-center">
                 <img :src="$rt(testimonial.avatar)" :alt="$rt(testimonial.name)"
                   class="w-16 h-16 rounded-full mr-4 object-cover">
