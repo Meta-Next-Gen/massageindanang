@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   ssr: false,
-
   css: [
     '@/assets/css/tailwind.css',
   ],
@@ -64,11 +63,14 @@ export default defineNuxtConfig({
       { code: 'kr', iso: 'ko-KR', language: 'ko-KR', name: '한국어', file: 'kr.json' }
     ],
   },
+  gtag: {
+    id: 'GTM-PKB2MFD4'
+  },
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
 
-  modules: ['@nuxtjs/i18n']
+  modules: ['@nuxtjs/i18n', '@vueuse/nuxt', 'nuxt-gtag']
 })

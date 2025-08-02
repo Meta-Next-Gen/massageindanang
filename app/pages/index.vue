@@ -11,7 +11,7 @@
           <img :src="`/flags/${locale}.svg`" :alt="locale" width="32" height="32">
         </button>
         <Transition enter-active-class="animate-fade-left" leave-active-class="animate-fade-left animate-reverse">
-          <div v-if="state.showLanguage" class="absolute right-0 bg-white rounded-lg shadow-lg flex space-x-2 px-2">
+          <div v-if="state.showLanguage" class="absolute right-0 bg-white rounded-lg shadow-lg flex space-x-2 px-2" v-on-click-outside="() => state.showLanguage = false">
             <template v-for="locale in locales" :key="locale.code">
               <button @click="setLocale(locale.code)" class=" w-8 h-8 ">
                 <img :src="`/flags/${locale.code}.svg`" :alt="locale.code" width="32" height="32" class="inline">
@@ -198,7 +198,7 @@
     </button>
 
     <Transition enter-active-class="animate-fade-up" leave-active-class="animate-fade-up animate-reverse">
-      <div v-if="state.showHelp"
+      <div v-if="state.showHelp" v-on-click-outside="() => state.showHelp = false"
         class="absolute bottom-full right-1/2 translate-x-1/2 rounded-xl grid gap-3 mb-4 bg-white shadow-lg">
         <a href="tel:0789489459" target="_blank">
           <img src="/logos/phone.svg" alt="Phone" class="h-10 w-10 hover:scale-110 transition duration-300">
@@ -228,6 +228,7 @@
 </template>
 
 <script lang="ts" setup>
+import { vOnClickOutside } from '@vueuse/components'
 const { locale, locales, setLocale, t } = useI18n()
 
 const state = reactive({
