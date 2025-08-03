@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/tailwind.css',
   ],
-
   app: {
     head: {
       title: 'Massage in Đà Nẵng - Thư Giãn Chuyên Nghiệp',
@@ -63,8 +62,14 @@ export default defineNuxtConfig({
       { code: 'kr', iso: 'ko-KR', language: 'ko-KR', name: '한국어', file: 'kr.json' }
     ],
   },
-  gtag: {
-    id: 'GTM-PKB2MFD4'
+  $production: {
+    scripts: {
+      registry: {
+        googleAnalytics: {
+          id: 'G-Y5489RCM5M',
+        }
+      }
+    }
   },
   vite: {
     plugins: [
@@ -72,5 +77,5 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ['@nuxtjs/i18n', '@vueuse/nuxt', 'nuxt-gtag']
+  modules: ['@nuxtjs/i18n', '@vueuse/nuxt', '@nuxt/scripts']
 })
