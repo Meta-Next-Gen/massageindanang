@@ -16,17 +16,17 @@
       {
         "title": "Full Body Massage",
         "description": "Helps relieve stress, improve blood circulation, and provides a feeling of deep relaxation.",
-        "image": "/images/massage-body.svg"
+        "image": "/images/service-body.jpg"
       },
       {
         "title": "Hot Stone Massage",
         "description": "Using hot stones to soothe muscles, relieve pain, and boost energy.",
-        "image": "/images/massage-hot-stones.svg"
+        "image": "/images/service-hot-stones.jpg"
       },
       {
         "title": "Cupping & Scraping",
         "description": "The simplest method to remove heat and cold, and clear blockages in the meridians.",
-        "image": "/images/massage-herbal.svg"
+        "image": "/images/service-cupping.jpg"
       }
     ]
   },

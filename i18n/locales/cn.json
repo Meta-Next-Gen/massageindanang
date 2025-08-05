@@ -16,17 +16,17 @@
       {
         "title": "全身按摩",
         "description": "有助于减轻压力，改善血液循环，带来深度的放松感。",
-        "image": "/images/massage-body.svg"
+        "image": "/images/service-body.jpg"
       },
       {
         "title": "热石按摩",
         "description": "使用热石舒缓肌肉，减轻疼痛，增强能量。",
-        "image": "/images/massage-hot-stones.svg"
+        "image": "/images/service-hot-stones.jpg"
       },
       {
         "title": "拔罐 & 刮痧",
         "description": "最简单的方法可以清除热气和寒气，消除经络中的阻塞。",
-        "image": "/images/massage-herbal.svg"
+        "image": "/images/service-cupping.jpg"
       }
     ]
   },

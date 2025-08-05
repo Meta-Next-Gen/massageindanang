@@ -11,7 +11,8 @@
           <img :src="`/flags/${locale}.svg`" :alt="locale" width="32" height="32">
         </button>
         <Transition enter-active-class="animate-fade-left" leave-active-class="animate-fade-left animate-reverse">
-          <div v-if="state.showLanguage" class="absolute right-0 bg-white rounded-lg shadow-lg flex space-x-2 px-2" v-on-click-outside="() => state.showLanguage = false">
+          <div v-if="state.showLanguage" class="absolute right-0 bg-white rounded-lg shadow-lg flex space-x-2 px-2"
+            v-on-click-outside="() => state.showLanguage = false">
             <template v-for="locale in locales" :key="locale.code">
               <button @click="setLocale(locale.code)" class=" w-8 h-8 ">
                 <img :src="`/flags/${locale.code}.svg`" :alt="locale.code" width="32" height="32" class="inline">
@@ -52,19 +53,21 @@
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-gray-100">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 py-16">
         <h2 class="text-4xl font-bold text-center text-primary">{{ $t('services.title') }}</h2>
-        <p class="text-lg text-center text-gray-700 mt-4 mb-12">{{ $t('services.description') }}</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <p class="text-lg text-center text-gray-700 mt-4 mb-16">{{ $t('services.description') }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-8">
           <template v-for="item in $tm('services.items')">
-            <div
-              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <div class="text-primary mb-4 text-5xl text-center">
-                <img :src="$rt(item.image)" :alt="$rt(item.title)" class="w-16 h-16 mx-auto">
+            <div class="bg-white rounded-lg shadow hover:shadow-xl hover:scale-110 transition duration-300 text-center">
+              <img class="rounded-t-lg" :src="$rt(item.image)" alt="" />
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-primary">{{ $rt(item.title) }}</h5>
+                </a>
+                <p class="text-gray-700">{{ $rt(item.description) }}</p>
               </div>
-              <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">{{ $rt(item.title) }}</h3>
-              <p class="text-gray-700 text-center">{{ $rt(item.description) }}</p>
             </div>
+
           </template>
         </div>
       </div>
@@ -228,20 +231,20 @@
 </template>
 
 <script lang="ts" setup>
-import { vOnClickOutside } from '@vueuse/components'
-const { locale, locales, setLocale, t } = useI18n()
+  import { vOnClickOutside } from '@vueuse/components'
+  const { locale, locales, setLocale, t } = useI18n()
 
-const state = reactive({
-  showLanguage: false,
-  showHelp: false
-})
+  const state = reactive({
+    showLanguage: false,
+    showHelp: false
+  })
 
-useSeoMeta({
-  title: t('seo.title'),
-  ogTitle: t('seo.title'),
-  description: t('seo.description'),
-  ogDescription: t('seo.description'),
-  ogImage: 'https://massageindanang.com/images/og-image.jpg'
-});
+  useSeoMeta({
+    title: t('seo.title'),
+    ogTitle: t('seo.title'),
+    description: t('seo.description'),
+    ogDescription: t('seo.description'),
+    ogImage: 'https://massageindanang.com/images/og-image.jpg'
+  });
 
 </script>

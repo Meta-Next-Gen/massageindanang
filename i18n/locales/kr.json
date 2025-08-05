@@ -16,17 +16,17 @@
       {
         "title": "전신 마사지",
         "description": "스트레스를 줄이고 혈액 순환을 개선하며 깊은 이완감을 가져다줍니다.",
-        "image": "/images/massage-body.svg"
+        "image": "/images/service-body.jpg"
       },
       {
         "title": "핫스톤 마사지",
         "description": "따뜻한 돌을 사용하여 근육을 부드럽게 풀고 통증을 완화하며 에너지를 보충합니다.",
-        "image": "/images/massage-hot-stones.svg"
+        "image": "/images/service-hot-stones.jpg"
       },
       {
         "title": "부항 & 괄사",
         "description": "가장 간단한 방법으로 열과 냉기를 제거하고 막힌 경락을 풀어줍니다.",
-        "image": "/images/massage-herbal.svg"
+        "image": "/images/service-cupping.jpg"
       }
     ]
   },
