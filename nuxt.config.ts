@@ -70,10 +70,10 @@ export default defineNuxtConfig({
         }
       }
     },
-    site: {
-      url: 'https://massageindanang.com',
-      name: 'Massage in Đà Nẵng - Thư Giãn Chuyên Nghiệp'
-    },
+  },
+  site: {
+    url: 'https://massageindanang.com',
+    name: 'Massage in Đà Nẵng - Thư Giãn Chuyên Nghiệp'
   },
   vite: {
     plugins: [
