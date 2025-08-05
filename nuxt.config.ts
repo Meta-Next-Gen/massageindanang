@@ -69,7 +69,11 @@ export default defineNuxtConfig({
           id: 'G-Y5489RCM5M',
         }
       }
-    }
+    },
+    site: {
+      url: 'https://massageindanang.com',
+      name: 'Massage in Đà Nẵng - Thư Giãn Chuyên Nghiệp'
+    },
   },
   vite: {
     plugins: [
@@ -77,5 +81,5 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ['@nuxtjs/i18n', '@vueuse/nuxt', '@nuxt/scripts']
+  modules: ['@nuxtjs/i18n', '@vueuse/nuxt', '@nuxt/scripts', '@nuxtjs/sitemap', '@nuxtjs/robots']
 })
