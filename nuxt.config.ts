@@ -81,5 +81,5 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ['@nuxtjs/i18n', '@vueuse/nuxt', '@nuxt/scripts', '@nuxtjs/sitemap']
+  modules: ['@nuxtjs/i18n', '@vueuse/nuxt', '@nuxt/scripts', '@nuxtjs/sitemap', '@nuxtjs/robots']
 })
