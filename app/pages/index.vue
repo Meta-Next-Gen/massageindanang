@@ -180,7 +180,7 @@
             <a href="https://wa.me/qr/WJTF2BIQME3EB1" class="text-gray-400 hover:text-white transition duration-300">
               <img src="/logos/whatsapp.svg" alt="WhatsApp" class="h-6 w-6" width="24" height="24">
             </a>
-            <a href="https://u.wechat.com/kKScc93Ie77PvEZe-8hpzYI?s=2"
+            <a href="https://u.wechat.com/kBk0z6RohmSGFf9XvbPRJdQ?s=2"
               class="text-gray-400 hover:text-white transition duration-300">
               <img src="/logos/wechat.svg" alt="WeChat" class="h-6 w-6" width="24" height="24">
             </a>
@@ -218,7 +218,7 @@
         <a href="https://wa.me/qr/WJTF2BIQME3EB1" target="_blank">
           <img src="/logos/whatsapp.svg" alt="WhatsApp" class="h-10 w-10 hover:scale-110 transition duration-300">
         </a>
-        <a href="https://u.wechat.com/kKScc93Ie77PvEZe-8hpzYI?s=2" target="_blank">
+        <a href="https://u.wechat.com/kBk0z6RohmSGFf9XvbPRJdQ?s=2" target="_blank">
           <img src="/logos/wechat.svg" alt="WeChat" class="h-10 w-10 hover:scale-110 transition duration-300">
         </a>
         <a href="https://vt.tiktok.com/ZSS8nQFrv/" target="_blank">
