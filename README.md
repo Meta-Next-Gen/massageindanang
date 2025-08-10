@@ -1,6 +1,8 @@
-# Nuxt Minimal Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<img width="2360" height="1640" alt="cover" src="https://github.com/user-attachments/assets/4cdadfd4-14f9-470d-9d19-7233ce593bd7" />
+
+[ONLINE](https://massageathome24h.com/)
+
 
 ## Setup
 
