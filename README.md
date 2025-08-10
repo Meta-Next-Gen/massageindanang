@@ -1,5 +1,4 @@
-
-<img width="2360" height="1640" alt="cover" src="https://github.com/user-attachments/assets/4cdadfd4-14f9-470d-9d19-7233ce593bd7" />
+<img width="2360" height="1640" alt="massageathome24h com_en(iPad Air)" src="https://github.com/user-attachments/assets/e0149959-d994-4798-b921-aa3010d586b1" />
 
 [ONLINE](https://massageathome24h.com/)
 
