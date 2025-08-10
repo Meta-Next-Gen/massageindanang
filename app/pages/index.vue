@@ -193,7 +193,7 @@
     </div>
   </footer>
 
-  <div class="fixed bottom-8 right-8 z-50">
+  <!-- <div class="fixed bottom-8 right-8 z-50">
     <button
       class="bg-primary text-white p-1 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110 cursor-pointer"
       @click="state.showHelp = !state.showHelp" aria-label="Contact Us">
@@ -226,7 +226,7 @@
         </a>
       </div>
     </Transition>
-  </div>
+  </div> -->
 
 </template>
 
