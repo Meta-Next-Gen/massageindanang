@@ -1,7 +1,7 @@
-<script lang="ts">
+<script lang="ts" setup>
   useScript({
     src: 'https://embed.tawk.to/68982e98a4fc79192a7c0457/1j297c1ae',
-    async: true,    
+    async: true,
     crossorigin: 'use-credentials',
     tagPosition: 'head',
   })
