@@ -243,8 +243,7 @@
     title: t('seo.title'),
     ogTitle: t('seo.title'),
     description: t('seo.description'),
-    ogDescription: t('seo.description'),
-    ogImage: 'https://massageindanang.com/images/og-image.jpg'
+    ogDescription: t('seo.description')    
   });
 
 </script>
